@@ -39,12 +39,12 @@ async function startServer() {
         const orderId = result.lastInsertRowid;
 
         const insertItem = db.prepare(`
-          INSERT INTO order_items (order_id, menu_item_id, quantity, price_at_time)
-          VALUES (?, ?, ?, ?)
+          INSERT INTO order_items (order_id, menu_item_id, item_name, quantity, price_at_time)
+          VALUES (?, ?, ?, ?, ?)
         `);
 
         for (const item of items) {
-          insertItem.run(orderId, item.id, item.quantity, item.price);
+          insertItem.run(orderId, item.id, item.name, item.quantity, item.price);
         }
 
         return orderId;

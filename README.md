@@ -1,20 +1,49 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Indian Delights Restaurant App
 
-# Run and deploy your AI Studio app
+A full-stack React application for a restaurant, featuring a menu, shopping cart, and order placement system.
 
-This contains everything you need to run your app locally.
+## Tech Stack
 
-View your app in AI Studio: https://ai.studio/apps/393595dc-7585-44f4-809e-00fe9afe2814
+- **Frontend**: React, Tailwind CSS, Lucide React
+- **Backend**: Node.js, Express
+- **Database**: SQLite (via `better-sqlite3`)
+- **Build Tool**: Vite
 
-## Run Locally
+## Prerequisites
 
-**Prerequisites:**  Node.js
+- Node.js (v18 or higher recommended)
+- npm (Node Package Manager)
 
+## Getting Started
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+1.  **Clone the repository** (if you haven't already):
+    ```bash
+    git clone <repository-url>
+    cd <project-directory>
+    ```
+
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
+
+3.  **Run the development server**:
+    ```bash
+    npm run dev
+    ```
+
+    The application will start on `http://localhost:3000`.
+    The database (`restaurant.db`) will be automatically created and seeded with initial menu items on the first run.
+
+## Project Structure
+
+- `src/App.tsx`: Main React application component.
+- `src/db.ts`: Database initialization and schema.
+- `server.ts`: Express server entry point (handles API and Vite middleware).
+- `src/index.css`: Global styles (Tailwind CSS).
+
+## API Endpoints
+
+- `GET /api/menu`: Fetch all menu items.
+- `POST /api/orders`: Place a new order.
+- `POST /api/contact`: Submit a contact form message.

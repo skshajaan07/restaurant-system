@@ -29,6 +29,7 @@ export function initDb() {
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       order_id INTEGER NOT NULL,
       menu_item_id INTEGER NOT NULL,
+      item_name TEXT NOT NULL,
       quantity INTEGER NOT NULL,
       price_at_time REAL NOT NULL,
       FOREIGN KEY (order_id) REFERENCES orders (id),
@@ -58,32 +59,32 @@ export function initDb() {
       // Main Courses
       ['Butter Chicken', 'Creamy tomato-based curry with tender chicken pieces.', 499, 'Main Courses', 'https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=800&q=80'],
       ['Paneer Butter Masala', 'Paneer in a rich, buttery tomato sauce.', 399, 'Main Courses', 'https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&q=80'],
-      ['Rogan Josh', 'Aromatic Kashmiri lamb curry with yogurt and spices.', 549, 'Main Courses', 'https://images.unsplash.com/photo-1585937421612-70a008356f36?auto=format&fit=crop&w=800&q=80'],
+      ['Rogan Josh', 'Aromatic Kashmiri lamb curry with yogurt and spices.', 549, 'Main Courses', 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80'],
       ['Palak Paneer', 'Paneer cubes in a creamy spinach gravy.', 349, 'Main Courses', 'https://images.unsplash.com/photo-1589647363585-f4a7d3877b10?auto=format&fit=crop&w=800&q=80'],
-      ['Chole Bhature', 'Spiced chickpeas served with fluffy fried bread.', 299, 'Main Courses', 'https://images.unsplash.com/photo-1626074353765-517a681e40be?auto=format&fit=crop&w=800&q=80'],
+      ['Chole Bhature', 'Spiced chickpeas served with fluffy fried bread.', 299, 'Main Courses', 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80'],
       ['Mutton Biryani', 'Fragrant basmati rice with tender mutton and spices.', 599, 'Main Courses', 'https://images.unsplash.com/photo-1633945274405-b6c8069047b0?auto=format&fit=crop&w=800&q=80'],
 
       // Breads
-      ['Butter Naan', 'Soft tandoori bread brushed with butter.', 79, 'Breads', 'https://images.unsplash.com/photo-1626074353765-517a681e40be?auto=format&fit=crop&w=800&q=80'], // Placeholder
-      ['Garlic Naan', 'Naan topped with fresh garlic and cilantro.', 99, 'Breads', 'https://images.unsplash.com/photo-1626074353765-517a681e40be?auto=format&fit=crop&w=800&q=80'], // Placeholder
-      ['Aloo Paratha', 'Whole wheat bread stuffed with spiced potatoes.', 129, 'Breads', 'https://images.unsplash.com/photo-1626074353765-517a681e40be?auto=format&fit=crop&w=800&q=80'], // Placeholder
-      ['Tandoori Roti', 'Whole wheat bread baked in a tandoor.', 59, 'Breads', 'https://images.unsplash.com/photo-1626074353765-517a681e40be?auto=format&fit=crop&w=800&q=80'], // Placeholder
+      ['Butter Naan', 'Soft tandoori bread brushed with butter.', 79, 'Breads', 'https://images.unsplash.com/photo-1626074353765-517a681e40be?auto=format&fit=crop&w=800&q=80'],
+      ['Garlic Naan', 'Naan topped with fresh garlic and cilantro.', 99, 'Breads', 'https://images.unsplash.com/photo-1645177628172-a94c1f96e6db?auto=format&fit=crop&w=800&q=80'],
+      ['Aloo Paratha', 'Whole wheat bread stuffed with spiced potatoes.', 129, 'Breads', 'https://images.unsplash.com/photo-1606471191009-63994c53433b?auto=format&fit=crop&w=800&q=80'],
+      ['Tandoori Roti', 'Whole wheat bread baked in a tandoor.', 59, 'Breads', 'https://images.unsplash.com/photo-1604152135912-04a022e23696?auto=format&fit=crop&w=800&q=80'],
 
       // Rice & Biryani
       ['Chicken Biryani', 'Aromatic rice layered with spiced chicken.', 449, 'Rice & Biryani', 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80'],
-      ['Veg Biryani', 'Fragrant rice with mixed vegetables and spices.', 349, 'Rice & Biryani', 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80'],
-      ['Jeera Rice', 'Basmati rice tempered with cumin seeds.', 199, 'Rice & Biryani', 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80'],
-      ['Prawn Biryani', 'Spiced prawns layered with fragrant basmati rice.', 599, 'Rice & Biryani', 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80'],
+      ['Veg Biryani', 'Fragrant rice with mixed vegetables and spices.', 349, 'Rice & Biryani', 'https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&q=80'],
+      ['Jeera Rice', 'Basmati rice tempered with cumin seeds.', 199, 'Rice & Biryani', 'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=80'],
+      ['Prawn Biryani', 'Spiced prawns layered with fragrant basmati rice.', 599, 'Rice & Biryani', 'https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80'],
 
       // Desserts
       ['Gulab Jamun', 'Soft milk dumplings soaked in rose-flavored syrup.', 149, 'Desserts', 'https://images.unsplash.com/photo-1589119908995-c6837fa14848?auto=format&fit=crop&w=800&q=80'],
-      ['Rasmalai', 'Spongy paneer balls in sweetened milk with saffron.', 179, 'Desserts', 'https://images.unsplash.com/photo-1589119908995-c6837fa14848?auto=format&fit=crop&w=800&q=80'],
-      ['Kheer', 'Creamy rice pudding with cardamom and nuts.', 129, 'Desserts', 'https://images.unsplash.com/photo-1589119908995-c6837fa14848?auto=format&fit=crop&w=800&q=80'],
+      ['Rasmalai', 'Spongy paneer balls in sweetened milk with saffron.', 179, 'Desserts', 'https://images.unsplash.com/photo-1543253687-c599f5e08fd8?auto=format&fit=crop&w=800&q=80'],
+      ['Kheer', 'Creamy rice pudding with cardamom and nuts.', 129, 'Desserts', 'https://images.unsplash.com/photo-1517244683847-7456b63c5969?auto=format&fit=crop&w=800&q=80'],
 
       // Drinks
       ['Mango Lassi', 'Creamy yogurt drink blended with fresh mangoes.', 149, 'Drinks', 'https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?auto=format&fit=crop&w=800&q=80'],
       ['Masala Chai', 'Spiced tea with cardamom, ginger, and cloves.', 99, 'Drinks', 'https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?auto=format&fit=crop&w=800&q=80'],
-      ['Nimbu Pani', 'Refreshing lemon drink with a hint of mint.', 79, 'Drinks', 'https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?auto=format&fit=crop&w=800&q=80'],
+      ['Nimbu Pani', 'Refreshing lemon drink with a hint of mint.', 79, 'Drinks', 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80'],
       ['Thandai', 'Traditional spiced milk drink with almonds and saffron.', 159, 'Drinks', 'https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?auto=format&fit=crop&w=800&q=80'],
     ];
 
@@ -93,6 +94,59 @@ export function initDb() {
 
     insertMany(items);
     console.log('Database seeded with menu items.');
+  } else {
+    // If database exists, update images to match db.ts (Source of Truth)
+    const updateImage = db.prepare('UPDATE menu_items SET image_url = ? WHERE name = ?');
+    
+    // Define items again for update (or move to shared scope if preferred, but keeping local for safety)
+    const items = [
+      // Starters
+      ['Paneer Tikka', 'Marinated paneer cubes grilled with spices and bell peppers.', 299, 'Starters', 'https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=800&q=80'],
+      ['Chicken 65', 'Spicy, deep-fried chicken bites with curry leaves and red chilies.', 349, 'Starters', 'https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=800&q=80'],
+      ['Aloo Tikki', 'Crispy potato patties served with mint chutney.', 199, 'Starters', 'https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&w=800&q=80'],
+      ['Samosa', 'Crispy pastry filled with spiced potatoes and peas.', 149, 'Starters', 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80'],
+      
+      // Main Courses
+      ['Butter Chicken', 'Creamy tomato-based curry with tender chicken pieces.', 499, 'Main Courses', 'https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=800&q=80'],
+      ['Paneer Butter Masala', 'Paneer in a rich, buttery tomato sauce.', 399, 'Main Courses', 'https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&q=80'],
+      ['Rogan Josh', 'Aromatic Kashmiri lamb curry with yogurt and spices.', 549, 'Main Courses', 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80'],
+      ['Palak Paneer', 'Paneer cubes in a creamy spinach gravy.', 349, 'Main Courses', 'https://images.unsplash.com/photo-1589647363585-f4a7d3877b10?auto=format&fit=crop&w=800&q=80'],
+      ['Chole Bhature', 'Spiced chickpeas served with fluffy fried bread.', 299, 'Main Courses', 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80'],
+      ['Mutton Biryani', 'Fragrant basmati rice with tender mutton and spices.', 599, 'Main Courses', 'https://images.unsplash.com/photo-1633945274405-b6c8069047b0?auto=format&fit=crop&w=800&q=80'],
+
+      // Breads
+      ['Butter Naan', 'Soft tandoori bread brushed with butter.', 79, 'Breads', 'https://images.unsplash.com/photo-1626074353765-517a681e40be?auto=format&fit=crop&w=800&q=80'],
+      ['Garlic Naan', 'Naan topped with fresh garlic and cilantro.', 99, 'Breads', 'https://images.unsplash.com/photo-1645177628172-a94c1f96e6db?auto=format&fit=crop&w=800&q=80'],
+      ['Aloo Paratha', 'Whole wheat bread stuffed with spiced potatoes.', 129, 'Breads', 'https://images.unsplash.com/photo-1606471191009-63994c53433b?auto=format&fit=crop&w=800&q=80'],
+      ['Tandoori Roti', 'Whole wheat bread baked in a tandoor.', 59, 'Breads', 'https://images.unsplash.com/photo-1604152135912-04a022e23696?auto=format&fit=crop&w=800&q=80'],
+
+      // Rice & Biryani
+      ['Chicken Biryani', 'Aromatic rice layered with spiced chicken.', 449, 'Rice & Biryani', 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80'],
+      ['Veg Biryani', 'Fragrant rice with mixed vegetables and spices.', 349, 'Rice & Biryani', 'https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&q=80'],
+      ['Jeera Rice', 'Basmati rice tempered with cumin seeds.', 199, 'Rice & Biryani', 'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=80'],
+      ['Prawn Biryani', 'Spiced prawns layered with fragrant basmati rice.', 599, 'Rice & Biryani', 'https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80'],
+
+      // Desserts
+      ['Gulab Jamun', 'Soft milk dumplings soaked in rose-flavored syrup.', 149, 'Desserts', 'https://images.unsplash.com/photo-1589119908995-c6837fa14848?auto=format&fit=crop&w=800&q=80'],
+      ['Rasmalai', 'Spongy paneer balls in sweetened milk with saffron.', 179, 'Desserts', 'https://images.unsplash.com/photo-1543253687-c599f5e08fd8?auto=format&fit=crop&w=800&q=80'],
+      ['Kheer', 'Creamy rice pudding with cardamom and nuts.', 129, 'Desserts', 'https://images.unsplash.com/photo-1517244683847-7456b63c5969?auto=format&fit=crop&w=800&q=80'],
+
+      // Drinks
+      ['Mango Lassi', 'Creamy yogurt drink blended with fresh mangoes.', 149, 'Drinks', 'https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?auto=format&fit=crop&w=800&q=80'],
+      ['Masala Chai', 'Spiced tea with cardamom, ginger, and cloves.', 99, 'Drinks', 'https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?auto=format&fit=crop&w=800&q=80'],
+      ['Nimbu Pani', 'Refreshing lemon drink with a hint of mint.', 79, 'Drinks', 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80'],
+      ['Thandai', 'Traditional spiced milk drink with almonds and saffron.', 159, 'Drinks', 'https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?auto=format&fit=crop&w=800&q=80'],
+    ];
+
+    const updateMany = db.transaction((items) => {
+      for (const item of items) {
+        // item[4] is image_url, item[0] is name
+        updateImage.run(item[4], item[0]);
+      }
+    });
+
+    updateMany(items);
+    console.log('Database images synced with menu items.');
   }
 }
 

@@ -17,6 +17,18 @@
     --border-radius: 10px;
     --danger-color: #dc3545; /* For remove button */
     --danger-hover: #c82333; /* For remove button hover */
+
+    /* ===== IMAGE URLS ===== */
+    --img-butter-naan: url('https://images.unsplash.com/photo-1626074353765-517a681e40be?auto=format&fit=crop&w=800&q=80');
+    --img-garlic-naan: url('https://images.unsplash.com/photo-1645177628172-a94c1f96e6db?auto=format&fit=crop&w=800&q=80');
+    --img-aloo-paratha: url('https://images.unsplash.com/photo-1606471191009-63994c53433b?auto=format&fit=crop&w=800&q=80');
+    --img-tandoori-roti: url('https://images.unsplash.com/photo-1604152135912-04a022e23696?auto=format&fit=crop&w=800&q=80');
+    --img-veg-biryani: url('https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&q=80');
+    --img-gulab-jamun: url('https://images.unsplash.com/photo-1589119908995-c6837fa14848?auto=format&fit=crop&w=800&q=80');
+    --img-rasmalai: url('https://images.unsplash.com/photo-1543253687-c599f5e08fd8?auto=format&fit=crop&w=800&q=80');
+    --img-kheer: url('https://images.unsplash.com/photo-1517244683847-7456b63c5969?auto=format&fit=crop&w=800&q=80');
+    --img-mango-lassi: url('https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?auto=format&fit=crop&w=800&q=80');
+    --img-masala-chai: url('https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?auto=format&fit=crop&w=800&q=80');
 }
 
 * {
